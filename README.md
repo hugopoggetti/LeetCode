@@ -1,1 +1,4 @@
 # LeetCode
+LeetCode is a popular online platform for people who want to improve their programming and problem-solving skills. The site offers a wide variety of programming problems, ranging from basic problems for beginners to the most difficult problems for experienced programmers.
+
+The problems on LeetCode are often based on important algorithmic and data structure concepts, such as binary search, trie, dynamic programming, and hash tables. Users can submit their code in a number of programming languages, including C, C++, Java, Python, and more. In addition to programming practice, LeetCode also offers regular programming challenges and contests for users who want to test their skills against others. The site also has an active community of users who can discuss problems, share solutions and tips, and help others improve their programming skills.
