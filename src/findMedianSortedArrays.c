@@ -51,12 +51,3 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
         return value;
     }
 }
-
-int main(void)
-{
-    int nums1[2] = {1, 3};
-    int nums2[2] = {2, 7};
-
-    double median = findMedianSortedArrays(nums1, 2, nums2, 2);
-    printf("Median = %f\n", median);
-}

@@ -21,12 +21,3 @@ char *longestCommonPrefix(char **strs, int strsSize)
     }
     return prefix;
 }
-
-int main() {
-    char *strs[] = {"flower", "flow", "flight"};
-    int strsSize = 3;
-    char *prefix = longestCommonPrefix(strs, strsSize);
-    printf("The longest common prefix is: %s\n", prefix);
-    free(prefix);
-    return 0;
-}

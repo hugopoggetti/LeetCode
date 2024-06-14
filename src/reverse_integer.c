@@ -20,12 +20,3 @@ int reverse(int x)
     }
     return reverse;
 }
-
-
-int main(void)
-{
-    int before = -2147483648;
-    int after = reverse(before);
-    printf("nb = %d\nafter reverse %d\n", before, after);
-    return 0;
-}

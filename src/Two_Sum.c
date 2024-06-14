@@ -20,13 +20,3 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
     }
     return target_array;
 }
-
-int main(void)
-{
-    int num[4] = {2, 7, 11, 15};
-    int returnSize = 0;
-    int *value = twoSum(num, 4, 9, &returnSize);
-
-    printf("output [%d, %d]\n", value[0], value[1]);
-    free(value);
-}

@@ -71,27 +71,3 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
     }
 }
 
-int main(void)
-{
-    struct ListNode *l1 = NULL;
-    struct ListNode *l2 = NULL;
-    struct ListNode *resuslt = NULL;
-
-    push(&l1, 6);
-    push(&l1, 4);
-    push(&l1, 9);
-    push(&l1, 5);
-    push(&l1, 7);
-    printf("l1 list is ");
-    printList(l1);
-
-    push(&l2, 4);
-    push(&l2, 8);
-    printf("l2 list is ");
-    printList(l2);
-
-    resuslt = addTwoNumbers(l1, l2);
-    printf("Result list is ");
-    printList(resuslt);
-    return 0;
-}

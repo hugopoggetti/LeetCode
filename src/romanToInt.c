@@ -18,10 +18,3 @@ int romanToInt(char *s)
     }
     return result;
 }
-
-int main(void)
-{
-    int result = romanToInt("MCMXCIV");
-    printf("reult = %d\n", result);
-    return 0;
-}

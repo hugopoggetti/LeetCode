@@ -24,9 +24,3 @@ char *intToRoman(int num)
     buffer[size] = '\0';
     return buffer;
 }
-
-int main(void)
-{
-    int num = 3749;
-    printf("num = %d\nRoman = %s\n", num, intToRoman(num));
-}

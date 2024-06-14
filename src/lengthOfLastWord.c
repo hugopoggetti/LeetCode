@@ -16,9 +16,3 @@ int lengthOfLastWord(char* s)
         count++;
     return count;
 }
-
-int main(void)
-{
-    int len = lengthOfLastWord("a");
-    printf("len = %d\n", len);
-}

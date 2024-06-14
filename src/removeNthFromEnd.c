@@ -28,8 +28,3 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n)
     }
     return prev;
 }
-
-int main(void)
-{
-    return 0;
-}

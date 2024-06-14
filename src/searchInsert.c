@@ -18,10 +18,3 @@ int searchInsert(int* nums, int numsSize, int target)
         return 0;
     return result + 1;
 }
-
-int main(void)
-{
-    int array[] = {-1,3,5,6};
-    int result = searchInsert(array, 4, 0);
-    printf("result = %d\n", result);
-}

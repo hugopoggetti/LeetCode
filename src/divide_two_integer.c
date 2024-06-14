@@ -11,9 +11,3 @@ int divide(int dividend, int divisor){
         return INT_MIN;
     return (int)result;
 }
-
-int main(void)
-{
-    int result = divide(-2147483648, -3);
-    printf("result = %d\n", result);
-}

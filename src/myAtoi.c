@@ -42,10 +42,3 @@ int myAtoi(char *str)
     }
     return int_value(nb * moins(str), str);
 }
-
-int main(void)
-{
-    char *str = "+1";
-    int str_to_int = myAtoi(str);
-    printf("str = %s to int %d\n", str, str_to_int);
-}

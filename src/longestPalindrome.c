@@ -87,13 +87,3 @@ char *longestPalindrome(char *s)
     longest_p[max_len] = '\0';
     return longest_p;
 }
-
-int main()
-{
-    char *str = "babad";
-    char *Palindrome = longestPalindrome(str);
-    printf("Longest Palindrome is: %s\n", Palindrome);
-    free(Palindrome);
-    return 0;
-
-}

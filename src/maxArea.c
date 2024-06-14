@@ -37,10 +37,3 @@ int maxArea(int* height, int heightSize)
     }
     return maxArea;
 }
-
-int main(void)
-{
-    int height[9] = {1,8,6,2,5,4,8,3,7};
-    int nb = maxArea(height, 9);
-    printf("Max Area is %d\n", nb);
-}

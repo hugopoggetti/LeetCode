@@ -14,16 +14,3 @@ bool isMatch(char * s, char * p)
     else
         return first_match && isMatch(s+1, p+1);
 }
-
-int main(void)
-{
-    char *s = "aa";
-    char *p = "a";
-    printf("s = %s p = %s result = ", s, p);
-    if (isMatch(s, p) == true) {
-        printf("True\n");
-        return 0;
-    }
-    printf("False\n");
-    return 0;
-}

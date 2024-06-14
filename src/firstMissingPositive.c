@@ -37,11 +37,3 @@ int firstMissingPositive(int* nums, int numsSize)
     free(present);
     return result;
 }
-
-int main(void)
-{
-    int array[] = {7, 8, 9, 11,12};
-    int result = firstMissingPositive(array, 5);
-    printf("result = %d\n", result);
-    return 0;
-}
