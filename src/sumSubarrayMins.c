@@ -35,10 +35,3 @@ int sumSubarrayMins(int* arr, int arrSize)
     free(stack);
     return (int)result;
 }
-
-int main(void)
-{
-    int array[] = {3,1,2,4};
-    int result = sumSubarrayMins(array, 4);
-    printf("La somme des minimums des sous-listes est : %d\n", result);
-}

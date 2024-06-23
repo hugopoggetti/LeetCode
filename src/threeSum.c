@@ -58,27 +58,3 @@ int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes
         (*returnColumnSizes)[i] = 3;
     return triplets;
 }
-
-int main()
-{
-    int nums[] = {-1, 0, 1, 2, -1, -4};
-    int numsSize = 6;
-    int returnSize;
-    int *returnColumnSizes;
-    int **triplets = threeSum(nums, numsSize, &returnSize, &returnColumnSizes);
-    for (int i = 0; i < returnSize; i++) {
-        printf("[");
-        for (int j = 0; j < returnColumnSizes[i]; j++) {
-            printf("%d", triplets[i][j]);
-            if (j < returnColumnSizes[i] - 1) {
-                printf(", ");
-            }
-        }
-        printf("]\n");
-    }
-    for (int i = 0; i < returnSize; i++) {
-        free(triplets[i]);
-    }
-    free(triplets);
-    return 0;
-}

@@ -37,17 +37,3 @@ int** fourSum(int* nums, int numsSize, int target, int* returnSize, int** return
     return four_sum;
 }
 
-int main(void)
-{
-    int nums[] = {2,2,2,2,2};
-    int return_size = 0;
-    int *col_size = 0;
-    int **four_sum = fourSum(nums, 8, 0, &return_size, &col_size);
-
-    printf("%d", four_sum[0][0]);
-    // for (int i = 0; i < 1 ; i++) {
-    //     for (int j = 0; j < 4; j++) {
-    //         printf("%d", four_sum[i][j]);
-    //     }
-    // }
-}

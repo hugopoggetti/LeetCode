@@ -36,10 +36,3 @@ int lengthOfLongestSubstring(char* s)
     return result;
 }
 
-int main(void)
-{
-    char *s = "abcabcabb";
-    int len = lengthOfLongestSubstring(s);
-    printf("len = %d\n", len);
-    return 0;
-}

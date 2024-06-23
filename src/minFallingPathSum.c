@@ -51,17 +51,3 @@ int minFallingPathSum(int** matrix, int matrixSize, int* matrixColSize)
     return result;
 }
 
-int main(void)
-{
-    int matrixSize = 4;
-    int matrixColSize[] = {4, 4, 4, 4};
-    int** matrix = (int**)malloc(matrixSize * sizeof(int*));
-    
-    matrix[0] = (int[]){100,-42,-46,-41};
-    matrix[1] = (int[]){31,97,10,-10};
-    matrix[2] = (int[]){-58,-51,82,89};
-    matrix[3] = (int[]){51,81,69,-51};
-    int result = minFallingPathSum(matrix, matrixSize, matrixColSize);
-    printf("result = %d\n", result);
-    free(matrix);
-}

@@ -48,10 +48,3 @@ bool containsDuplicate(int* nums, int numsSize)
     free_table(table);
     return false;
 }
-
-int main(void)
-{
-    int num[] = {2,14,18,22,22};
-    bool result = containsDuplicate(num, 5);
-    printf("result %d\n", result);
-}

@@ -50,13 +50,3 @@ int* plusOne(int* digits, int digitsSize, int* returnSize)
     (*returnSize) = len;
     return plusOne;
 }
-
-int main(void)
-{
-    int size = 0;
-    int digits[] = {9,8,7,6,5,4,3,2,1,9};
-    int *result = plusOne(digits, 10, &size);
-    for (int i = 0; i < size; i++)
-        printf("%d\n",result[i]);
-    return 0;
-}

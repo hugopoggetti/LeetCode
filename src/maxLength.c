@@ -21,10 +21,3 @@ int maxLength(char** arr, int arrSize)
     }
     return result;
 }
-
-int main(void)
-{
-    char *array[] = {"une", "deux", "trois"};
-    int max = maxLength(array, 3);
-    printf("max = %d\n", max);
-}

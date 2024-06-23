@@ -37,25 +37,3 @@ int** permute(int* nums, int numsSize, int* returnSize, int** returnColumnSizes)
     generatePermutations(nums, 0, numsSize - 1, result, returnSize, returnColumnSizes);
     return result;
 }
-
-int main(void)
-{
-    int nums[] = {1, 2, 3};
-    int numsSize = sizeof(nums) / sizeof(nums[0]);
-    int returnSize;
-    int *returnColumnSizes;
-
-    int **result = permute(nums, numsSize, &returnSize, &returnColumnSizes);
-
-    // Print the permutations
-    printf("Permutations:\n");
-    for (int i = 0; i < returnSize; i++) {
-        for (int j = 0; j < returnColumnSizes[i]; j++) {
-            printf("%d ", result[i][j]);
-        }
-        printf("\n");
-        free(result[i]); // Free each permutation array
-    }
-    free(result); // Free the result array
-    free(returnColumnSizes); // Free the column sizes array
-}

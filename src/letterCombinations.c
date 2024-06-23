@@ -46,16 +46,3 @@ char** letterCombinations(char* digits, int* returnSize)
     free(combination);
     return combinations;
 }
-
-int main(void)
-{
-    int return_size = 0;
-    char **combinations = letterCombinations("23", &return_size);
-    for (int i = 0; i < return_size; i++) {
-        printf("[%s] ", combinations[i]);
-        free(combinations[i]);
-    }
-    printf("\n");
-    free(combinations);
-    return 0;
-}

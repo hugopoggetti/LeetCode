@@ -20,15 +20,3 @@ int* findErrorNums(int* nums, int numsSize, int* returnSize)
     (*returnSize) = count;
     return c_array;
 }
-
-int main(void)
-{
-    int nums[] = {1,1};
-    int size = 0;
-    int *array = findErrorNums(nums, 2, &size);
-
-    for (int i = 0; i < size; i++) {
-        printf("%d\n", array[i]);
-    }
-    free(array);
-}

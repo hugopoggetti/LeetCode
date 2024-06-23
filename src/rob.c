@@ -23,9 +23,3 @@ int rob(int* nums, int numsSize)
     free(array);
     return result;
 }
-
-int main(void)
-{
-    int nums[] = {2,7,9,3,1};
-    printf("RESULT = %d\n", rob(nums, 5));
-}

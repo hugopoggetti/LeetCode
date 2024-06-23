@@ -33,9 +33,3 @@ int threeSumClosest(int* nums, int numsSize, int target)
     }
     return closestSum;
 }
-
-int main(void)
-{
-    int nums[4] = {-1, 2, 1, -4};
-    printf("closest sum = %d\n", threeSumClosest(nums, 4, 1));
-}
