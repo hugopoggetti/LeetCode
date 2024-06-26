@@ -9,31 +9,28 @@
 #include <string.h>
 #include <limits.h>
 
+int compare(const void *a, const void *b)
+{
+    return (*(int *)a - *(int *)b);
+}
+
 int** fourSum(int* nums, int numsSize, int target, int* returnSize, int** returnColumnSizes)
 {
-    int **four_sum = malloc(sizeof(int *));
-    int count = 0;
-    *returnSize = 4;
-    for (int i = 0; i < numsSize; i++) {
-        for (int j = i + 1; j < numsSize; j++) {
-            for (int ibis = j + 1; ibis < numsSize; ibis++) {
-                for (int jbis = ibis + 1; jbis < numsSize; jbis++) {
-                    if (nums[i] + nums[j] + nums[ibis] + nums[jbis] == target) {
-                        if (count > 0)
-                            four_sum = realloc(four_sum, sizeof(int *) * count + 1);
-                        four_sum[count] = malloc(sizeof(int) * 4); 
-                        four_sum[count][0] = i;
-                        four_sum[count][1] = j;
-                        four_sum[count][2] = ibis;
-                        four_sum[count][3] = jbis;
-                        count++;
-                    }
-                }
-            }
-        }
-    }
-    for (int i = 0; i < count; i++)
-        returnColumnSizes[count][0] = 4;
-    return four_sum;
+    qsort(nums, numsSize, sizeof(int), compare);
+
+    for (int i = 0; i < numsSize; i++)
+        printf("%d\n", nums[i]);
+    return NULL;
+}
+
+int main(void)
+{
+    int nums[] = {1, 0, -1, 0, -2, 2};
+    int numsSize = sizeof(nums) / sizeof(nums[0]);
+    int target = 0;
+    int returnSize = 0;
+    int* returnColumnSizes = NULL;
+
+    int** result = fourSum(nums, numsSize, target, &returnSize, &returnColumnSizes);
 }
 

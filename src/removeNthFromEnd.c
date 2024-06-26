@@ -17,14 +17,19 @@ struct ListNode {
 
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n)
 {
-    struct ListNode *current = head;
-    struct ListNode *prev;
+    struct ListNode dummy;
+    dummy.next = head;
+    struct ListNode *first = &dummy;
+    struct ListNode *second = &dummy;
 
-    if (current != NULL && current->val == n)
-        prev = current->next;
-    while (current != NULL) {
-        prev = current;
-        current = current->next;
+    for (int i = 0; i <= n; i++)
+        first = first->next;
+    while (first != NULL) {
+        first = first->next;
+        second = second->next;
     }
-    return prev;
+    struct ListNode *nodeToRemove = second->next;
+    second->next = second->next->next;
+    free(nodeToRemove);
+    return dummy.next;
 }
