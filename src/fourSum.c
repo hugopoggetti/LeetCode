@@ -33,4 +33,3 @@ int main(void)
 
     int** result = fourSum(nums, numsSize, target, &returnSize, &returnColumnSizes);
 }
-
