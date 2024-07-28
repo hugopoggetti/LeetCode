@@ -23,16 +23,3 @@ int* sortArray(int* nums, int numsSize, int* returnSize)
     }
     return nums;
 }
-
-int main(void)
-{
-    int array[] = {5,2,3,1};
-
-    int size = 0;
-    int *new = sortArray(array, 4, &size);
-
-    for (int i = 0; i < size; i++) {
-        printf("%d\n", new[i]);
-    }
-    return 0;
-}

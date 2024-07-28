@@ -1,12 +1,6 @@
-#include <stdio.h>
-#include <stdbool.h>
+#include <stddef.h>
 #include <stdlib.h>
-
-// struct TreeNode {
-//     int val;
-//     struct TreeNode *left;
-//     struct TreeNode *right;
-// };
+#include <stdio.h>
 
 static const size_t GROW_FACTOR = 2;
 
@@ -50,12 +44,12 @@ void traversal(struct TreeNode* root, dynarray *da)
 {
     if (root != NULL) {
         traversal(root->left, da);
-        dynarray_push(da, root->val);
         traversal(root->right, da);
+        dynarray_push(da, root->val);
     }
 }
 
-int* inorderTraversal(struct TreeNode* root, int* returnSize)
+int* postorderTraversal(struct TreeNode* root, int* returnSize)
 {
     dynarray *da = dynarray_new();
     traversal(root, da);
