@@ -13,11 +13,3 @@ int singleNumber(int* nums, int numsSize)
         nb = (nb ^ nums[i]);
     return nb;
 }
-
-int main(void)
-{
-    int nums[] = {2,1,1};
-    int result = singleNumber(nums, 3);
-    printf("result = %d\n", result);
-    return 0;
-}

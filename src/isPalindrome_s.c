@@ -44,7 +44,6 @@ bool isPalindrome(char* s)
     char *non_alpha = non_alpha_s(s, &len);
     char *reverse = reverse_string(non_alpha, len);
 
-   // printf("alp = %s reverse = %s\n", non_alpha, reverse);
     int result = strcmp(non_alpha, reverse);
     free(non_alpha);
     free(reverse);
