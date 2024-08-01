@@ -3,36 +3,32 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-int max_value(int first, int second)
-{
-    return (first > second) ? first : second;
-}
+int max_value(int first, int second) { return (first > second) ? first : second; }
 
-bool is_rep_char(char *s, int i, int j)
+bool is_rep_char(char *s, int i)
 {
-    bool visited[256];
-    for (int i = 0; i < 256; i++)
-        visited[i] = false;
+    int vistied[256] = {0};
+    int ans = 0;
 
-    for (int xs = i; xs <= j; xs++) {
-        if (visited[s[xs]] == true)
-            return false;
-        visited[s[xs]] = true;
+    for (int j = i; s[j] != '\0'; j++) {
+        for (int x = 0; x < 256; x++) {
+            if (vistied[x] >= 2)
+                return ans - 1;
+        }
+        vistied[s[j]] += 1;
+        ans++;
     }
-    return true;
+    return ans;
 }
 
 int lengthOfLongestSubstring(char* s)
 {
-    int result = 0;
-    for (int i = 0; s[i] != '\0'; i++) {
-        int j = i;
-        while (j[s] != '\0') {
-            if (is_rep_char(s, i, j))
-                result = max_value(result, j - i + 1);
-            j++;
-        }
-    }
-    return result;
-}
+    int ans = INT_MIN;
 
+    for (int i = 0; s[i] != '\0'; i++) {
+        int len = is_rep_char(s, i);
+        if (len > ans)
+            ans = len;
+    }
+    return ans;
+}
