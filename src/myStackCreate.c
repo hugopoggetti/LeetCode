@@ -11,6 +11,8 @@
  
  * myStackFree(obj);
 */
+#include <stddef.h>
+#include <stdbool.h>
 
 #define GROW_FACTOR 2;
 
