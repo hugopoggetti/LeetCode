@@ -59,11 +59,3 @@ int maxProfit(int* prices, int pricesSize)
         return max_profit;
     return 0;
 }
-
-int main(void)
-{
-    int price[] = {7,6,4,3,1};
-    int max = maxProfit(price, 5);
-    printf("result = %d\n", max);
-    return 0;
-}

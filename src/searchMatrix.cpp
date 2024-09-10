@@ -21,25 +21,3 @@ public:
         return 0;
     }
 };
-
-int main() {
-    Solution solution;
-    vector<vector<int>> matrix = {
-        {1, 4, 7, 11, 15},
-        {2, 5, 8, 12, 19},
-        {3, 6, 9, 16, 22},
-        {10, 13, 14, 17, 24},
-        {18, 21, 23, 26, 30}
-    };
-    int target = 40;
-
-    bool result = solution.searchMatrix(matrix, target);
-
-    if (result) {
-        cout << "Target " << target << " found in the matrix." << endl;
-    } else {
-        cout << "Target " << target << " not found in the matrix." << endl;
-    }
-
-    return 0;
-}
