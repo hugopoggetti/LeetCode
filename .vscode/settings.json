@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "cstdlib": "c",
+        "memory_resource": "c",
+        "memory": "c"
+    }
+}
